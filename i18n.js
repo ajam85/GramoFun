@@ -1,0 +1,45 @@
+// Jednoduchý slovník pro CZ/EN rozhraní.
+const I18N = {
+  cs: {
+    select_library: 'Vybrat knihovnu…',
+    generate_playlists: 'Vygenerovat playlisty…',
+    show_title: 'Zobrazit název',
+    light_mode: 'Světlý režim',
+    slider_color: 'Barva posuvníků',
+    queue_header: 'Fronta přehrávání',
+    queue_empty_hint: 'Přetáhněte sem label playlistu z knihovny.',
+    play_queue: 'Přehrát frontu',
+    nothing_playing: 'Nic se nepřehrává',
+    empty_state: 'Vyberte složku s playlisty (.m3u8), abyste načetli knihovnu.',
+    settings_title: 'Nastavení',
+    queue_toggle_title: 'Fronta přehrávání',
+    prev_title: 'Předchozí',
+    play_title: 'Přehrát/Pauza',
+    next_title: 'Další',
+    queue_close_title: 'Skrýt frontu',
+    remove_from_queue: 'Odebrat z fronty',
+    generate_result: (created, skipped) =>
+      `Vytvořeno playlistů: ${created}\nPřeskočeno (již existují): ${skipped}`
+  },
+  en: {
+    select_library: 'Select library…',
+    generate_playlists: 'Generate playlists…',
+    show_title: 'Show title',
+    light_mode: 'Light mode',
+    slider_color: 'Slider color',
+    queue_header: 'Playback queue',
+    queue_empty_hint: 'Drag a playlist tile here from the library.',
+    play_queue: 'Play queue',
+    nothing_playing: 'Nothing playing',
+    empty_state: 'Select a folder with playlists (.m3u8) to load the library.',
+    settings_title: 'Settings',
+    queue_toggle_title: 'Playback queue',
+    prev_title: 'Previous',
+    play_title: 'Play/Pause',
+    next_title: 'Next',
+    queue_close_title: 'Hide queue',
+    remove_from_queue: 'Remove from queue',
+    generate_result: (created, skipped) =>
+      `Playlists created: ${created}\nSkipped (already exist): ${skipped}`
+  }
+};

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>GramoFun</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="content-area">
+    <main id="library" class="library">
+      <p id="empty-state" class="empty-state" data-i18n="empty_state">Vyberte složku s playlisty (.m3u8), abyste načetli knihovnu.</p>
+      <div id="tiles" class="tiles"></div>
+    </main>
+
+    <aside id="queue-panel" class="queue-panel hidden">
+      <div class="queue-header">
+        <span data-i18n="queue_header">Fronta přehrávání</span>
+        <button id="queue-close-btn" class="icon-btn small" data-i18n-title="queue_close_title"></button>
+      </div>
+
+      <div id="queue-list" class="queue-list"></div>
+      <p id="queue-empty-hint" class="empty-state small" data-i18n="queue_empty_hint">Přetáhněte sem label playlistu z knihovny.</p>
+
+      <button id="play-queue-btn" class="btn full-width" data-i18n="play_queue">Přehrát frontu</button>
+    </aside>
+  </div>
+
+  <footer class="player-bar">
+    <div class="player-info">
+      <div id="track-title" class="track-title" data-i18n="nothing_playing">Nic se nepřehrává</div>
+      <div class="playlist-meta">
+        <span id="playlist-title" class="playlist-title"></span>
+        <span id="track-counter" class="track-counter"></span>
+      </div>
+    </div>
+
+    <div class="player-controls">
+      <button id="prev-btn" class="icon-btn" data-i18n-title="prev_title"></button>
+      <button id="play-btn" class="icon-btn play-btn" data-i18n-title="play_title"></button>
+      <button id="next-btn" class="icon-btn" data-i18n-title="next_title"></button>
+    </div>
+
+    <div class="progress-row">
+      <span id="current-time" class="time">0:00</span>
+      <input id="seek" type="range" min="0" max="100" value="0" step="0.1" />
+      <span id="duration" class="time">0:00</span>
+    </div>
+
+    <div class="volume-row">
+      <span id="volume-icon" class="icon-static"></span>
+      <input id="volume" type="range" min="0" max="1" value="1" step="0.01" />
+
+      <button id="queue-toggle-btn" class="icon-btn" data-i18n-title="queue_toggle_title"></button>
+
+      <div class="settings-wrap">
+        <button id="settings-btn" class="icon-btn settings-btn" data-i18n-title="settings_title"></button>
+
+        <div id="settings-panel" class="settings-panel hidden">
+          <button id="select-folder-btn" class="btn full-width" data-i18n="select_library">Vybrat knihovnu…</button>
+          <button id="create-playlist-btn" class="btn full-width" data-i18n="generate_playlists">Vygenerovat playlisty…</button>
+
+          <label class="settings-row">
+            <span data-i18n="show_title">Zobrazit název</span>
+            <input type="checkbox" id="show-title-checkbox" class="switch" checked />
+          </label>
+
+          <label class="settings-row">
+            <span data-i18n="light_mode">Světlý režim</span>
+            <input type="checkbox" id="light-theme-checkbox" class="switch" />
+          </label>
+
+          <label class="settings-row">
+            <span>English</span>
+            <input type="checkbox" id="lang-checkbox" class="switch" />
+          </label>
+
+          <label class="settings-row">
+            <span data-i18n="slider_color">Barva posuvníků</span>
+            <input type="color" id="slider-color-picker" class="color-picker" value="#4da3ff" />
+          </label>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <audio id="audio"></audio>
+
+  <script src="icons.js"></script>
+  <script src="i18n.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

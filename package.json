@@ -1,0 +1,63 @@
+{
+  "name": "gramofun",
+  "version": "1.0.0",
+  "description": "GramoFun - jednoduchý přehrávač hudby s knihovnou playlistů (.m3u8)",
+  "main": "main.js",
+  "author": "Marian",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --win",
+    "build:mac": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac zip",
+    "build:linux": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --linux AppImage",
+    "build:all": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder -mwl"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "music-metadata": "^7.14.0"
+  },
+  "build": {
+    "appId": "com.gramofun.app",
+    "productName": "GramoFun",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!assets/logo/gramofun-*.png"
+    ],
+    "icon": "build/icon",
+    "win": {
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": "zip",
+      "icon": "build/icon.icns",
+      "category": "public.app-category.music"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "category": "Audio"
+    }
+  }
+}
