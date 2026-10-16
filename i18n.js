@@ -18,6 +18,12 @@ const I18N = {
     next_title: 'Další',
     queue_close_title: 'Skrýt frontu',
     remove_from_queue: 'Odebrat z fronty',
+    shuffle_title: 'Náhodné přehrávání',
+    filter_all: 'Vše',
+    tag_placeholder: 'Zadejte nový štítek…',
+    tag_add: 'Přidat',
+    tag_none: 'Zatím nemáte žádné štítky.',
+    tile_hint: 'Pravé tlačítko myši: štítky',
     generate_result: (created, skipped) =>
       `Vytvořeno playlistů: ${created}\nPřeskočeno (již existují): ${skipped}`
   },
@@ -39,6 +45,12 @@ const I18N = {
     next_title: 'Next',
     queue_close_title: 'Hide queue',
     remove_from_queue: 'Remove from queue',
+    shuffle_title: 'Shuffle',
+    filter_all: 'All',
+    tag_placeholder: 'Enter a new tag…',
+    tag_add: 'Add',
+    tag_none: 'No tags yet.',
+    tile_hint: 'Right-click: tags',
     generate_result: (created, skipped) =>
       `Playlists created: ${created}\nSkipped (already exist): ${skipped}`
   }

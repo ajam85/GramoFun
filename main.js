@@ -135,6 +135,22 @@ ipcMain.handle('get-playlist-cover', async (event, m3u8Path) => {
   }
 });
 
+ipcMain.handle('get-tags', async () => {
+  return readConfig().tags || {};
+});
+
+ipcMain.handle('set-tags', async (event, m3u8Path, tags) => {
+  const cfg = readConfig();
+  const all = cfg.tags || {};
+  if (Array.isArray(tags) && tags.length > 0) {
+    all[m3u8Path] = tags;
+  } else {
+    delete all[m3u8Path];
+  }
+  writeConfig({ ...cfg, tags: all });
+  return true;
+});
+
 ipcMain.handle('select-folder-plain', async () => {
   const result = await dialog.showOpenDialog({ properties: ['openDirectory'] });
   if (result.canceled || result.filePaths.length === 0) return null;

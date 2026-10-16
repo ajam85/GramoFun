@@ -29,6 +29,14 @@ Jednoduchý desktopový přehrávač hudby s knihovnou playlistů.
   pod ním. Pokud první skladba v playlistu obsahuje v ID3 tagu
   obrázek (cover art), použije se jako pozadí labelu; pokud ne,
   zobrazí se logo GramoFun jako výchozí obrázek.
+- **Náhodné přehrávání** – ikona shuffle vedle ovládání hlasitosti
+  zamíchá pořadí skladeb v právě hraném playlistu (aktuální skladba
+  zůstává první). Volba se ukládá.
+- **Štítky** – pravým tlačítkem myši na albu otevřete okno, kde
+  můžete albu přiřadit existující štítky nebo vytvořit nový. Nad
+  knihovnou se objeví řádek se štítky; kliknutím na jeden či více
+  štítků se knihovna vyfiltruje na alba, která mají všechny vybrané
+  štítky. Štítky se ukládají do konfigurace aplikace.
 - Při přehrávání se u názvu playlistu zobrazuje počítadlo skladeb,
   např. `(2/10)`. Informace o přehrávané skladbě jsou vycentrované
   uprostřed panelu, ovládání hlasitosti je vlevo dole vedle

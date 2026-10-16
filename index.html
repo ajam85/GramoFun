@@ -9,6 +9,7 @@
   <div class="content-area">
     <main id="library" class="library">
       <p id="empty-state" class="empty-state" data-i18n="empty_state">Vyberte složku s playlisty (.m3u8), abyste načetli knihovnu.</p>
+      <div id="filter-bar" class="filter-bar hidden"></div>
       <div id="tiles" class="tiles"></div>
     </main>
 
@@ -50,6 +51,8 @@
       <span id="volume-icon" class="icon-static"></span>
       <input id="volume" type="range" min="0" max="1" value="1" step="0.01" />
 
+      <button id="shuffle-btn" class="icon-btn" data-i18n-title="shuffle_title"></button>
+
       <button id="queue-toggle-btn" class="icon-btn" data-i18n-title="queue_toggle_title"></button>
 
       <div class="settings-wrap">
@@ -82,6 +85,15 @@
       </div>
     </div>
   </footer>
+
+  <div id="tag-popover" class="tag-popover hidden">
+    <div id="tag-popover-title" class="tag-popover-title"></div>
+    <div id="tag-popover-chips" class="chip-row"></div>
+    <div class="tag-input-row">
+      <input id="tag-input" type="text" class="text-input" data-i18n-placeholder="tag_placeholder" />
+      <button id="tag-add-btn" class="btn" data-i18n="tag_add">Přidat</button>
+    </div>
+  </div>
 
   <audio id="audio"></audio>
 
