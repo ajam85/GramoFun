@@ -1,6 +1,6 @@
 {
   "name": "gramofun",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "GramoFun - jednoduchý přehrávač hudby s knihovnou playlistů (.m3u8)",
   "main": "main.js",
   "author": "Marian",
